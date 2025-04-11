@@ -25,6 +25,10 @@ public:
         pills = 2;
     }
 
+    int get_money_value() const {
+        return money;
+    }
+
     void set_player_name(const string *set_name) {
         name = *set_name;
     }

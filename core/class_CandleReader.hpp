@@ -14,10 +14,10 @@ public:
 
     ~CandleReader() = default;
 
-    void set_normal_world_money(player player_obj, shop shop_obj) {
-        normal_world_money = player_obj.money + shop_obj.money;
+    void set_normal_world_money(const player& player_obj, const shop& shop_obj) {
+        normal_world_money = player_obj.get_money_value() + shop_obj.get_money_value();
     }
-
+    
     int get_normal_world_money() {
         return normal_world_money;
     }

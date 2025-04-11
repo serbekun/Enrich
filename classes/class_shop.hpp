@@ -13,6 +13,10 @@ private:
 
 public:
     
+    int get_money_value() const {
+        return money;
+    }    
+
     void change_shop_ifactive() {
         if (money > 10) {
 
