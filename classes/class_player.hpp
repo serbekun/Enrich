@@ -7,15 +7,17 @@ namespace game_class {
 
 class player {
 
-private:
+
+
+public:
+    
     string name;
     int money;
     int health;
     int stress; // min 0% max 100%
     int pills;
     int pills_ifactive;
-public:
-
+    
     player() {
         money = 25000;
         health = 100;
