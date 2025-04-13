@@ -40,7 +40,7 @@ void play_menu() {
             player.up_loss_pills_ifactive(round_count);
 
             // shop need action
-            shop.change_shop_ifactive(candle_reader);
+            shop.change_shop_ifactive(&candle_reader);
     
             // game play menu
             display.show_base_info(shop, player);
