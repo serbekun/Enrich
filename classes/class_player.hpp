@@ -29,6 +29,10 @@ public:
         return money;
     }
 
+    int get_pills_value() const {
+        return pills;
+    }
+
     int get_stress_value() const {
         return stress;
     }
