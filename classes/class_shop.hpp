@@ -36,7 +36,27 @@ public:
     
     int get_money_value() const {
         return money;
-    }    
+    }
+
+    int get_wood_value() const {
+        return wood;
+    }
+
+    int get_stone_value() const {
+        return stone;
+    }
+
+    void change_money_value(int change_value) {
+        this->money += change_value;
+    }
+
+    void change_wood_value(int change_value) {
+        this->wood += change_value;
+    }
+
+    void change_stone_value(int change_value) {
+        this->stone += change_value;
+    }
 
     void sell_pills(GamePlayObject::player& person, int have_many_pills_buy) {
         
