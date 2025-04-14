@@ -11,6 +11,8 @@ class player {
     int money;
     int health;
     int stress; // min 0% max 100%
+    int wood;
+    int stone;
     int pills;
     int pills_ifactive;
 
@@ -21,6 +23,8 @@ public:
         money = 25000;
         health = 100;
         stress = 0;
+        wood = 0;
+        stone = 0;
         pills = 2;
         pills_ifactive = 100;
     }
