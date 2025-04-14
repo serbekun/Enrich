@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <cmath>
 
 #include "class_player.hpp"
 
@@ -46,6 +47,18 @@ public:
         return stone;
     }
 
+    int get_shop_ifactive_value() const {
+        return shop_ifactive;
+    }
+
+    int get_have_pills() const {
+        return have_pills;
+    }
+
+    int get_pills_cost() const {
+        return pills_cost;
+    }
+    
     void change_money_value(int change_value) {
         this->money += change_value;
     }
@@ -62,18 +75,37 @@ public:
         
         if (have_many_pills_buy > have_pills) {
             cout << "you can't buy '" << have_many_pills_buy << "' pills because there isn't that much in the world!!!" << endl;
+            cout << "you can buy only '" << have_pills << "' pills" << endl;
             return;
         }
-        int player_have_money = person.get_money_value();
+        int person_have_money = person.get_money_value();
         int need_money_for_buy = have_many_pills_buy * pills_cost;
         
-        if (player_have_money < need_money_for_buy) {
+        if (person_have_money < need_money_for_buy) {
             cout << "you can't byu '" << have_many_pills_buy << "' because you don't have that much money!!!" << endl;
+            int can_buy_pills = person_have_money / pills_cost;
+            cout << "you can buy only '" << floor(can_buy_pills) << "' pills with exist money" << endl;
             return;
         }
         
+        this->money += need_money_for_buy;
+        this->have_pills -= have_many_pills_buy;
+        need_money_for_buy *= -1;
         person.change_money_value(need_money_for_buy);
         person.change_pills_value(have_many_pills_buy);
+
+    }
+
+    void sell_wood(GamePlayObject::player person, int have_many_wood_buy) {
+
+        if (have_many_wood_buy > wood) {
+            cout << "you can't buy '" << have_many_wood_buy << "' because there isn't that much in the world!!!" << endl;
+            cout << "you can buy only '" << stone << "' wood" << endl;
+            return;
+        }
+
+
+
 
     }
 
