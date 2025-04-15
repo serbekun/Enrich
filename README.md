@@ -1,6 +1,6 @@
 ### enrich
 'enrich' is game where use many oop
-i make this project for lerning c++ and oop
+i make this project for learning c++ and oop
 
 for compile
 ```sh
@@ -10,7 +10,7 @@ for start
 ```sh
 ./Release/enrich
 ```
-for start wiht test mod
+for start with test mod
 ```sh
 ./Release/enrich test
 ```
