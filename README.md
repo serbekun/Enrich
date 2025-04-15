@@ -1,5 +1,8 @@
 ### enrich
-for compile  
+'enrich' is game where use many oop
+i make this project for lerning c++ and oop
+
+for compile
 ```sh
 g++ -o /Release/enrich main.cpp
 ```
