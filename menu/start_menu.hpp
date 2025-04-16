@@ -12,6 +12,7 @@ namespace Menus {
 void start_menu(bool test_mod) {
     string input_str;
     short input;
+    string player_name;
 
     while (true) {
         cout << "==========MENU==========" << endl;
@@ -35,8 +36,10 @@ void start_menu(bool test_mod) {
 
         switch (input) {
             case 1:
+                cout << "enter your nickname :";
+                getline(cin, player_name);
                 cout << "==========START==========" << endl;
-                Menus::play_menu(test_mod);
+                Menus::play_menu(test_mod, player_name);
                 break;
 
             case 2:
