@@ -20,6 +20,8 @@ public:
         cout << player.get_player_name() << " money - " << player.get_money_value() << endl;
         cout << player.get_player_name() << " strees - " << player.get_stress_value() << endl;
         cout << player.get_player_name() << " pills - " << player.get_pills_value() << endl;
+        cout << player.get_player_name() << " wood - " << player.get_wood_value() << endl;
+        cout << player.get_player_name() << " stone - " << player.get_stone_value() << endl;
         cout << "1. drink pills" << endl;
         cout << "2. buy pills" << endl;
         cout << ":";
