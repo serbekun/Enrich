@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <string>
 
 // Include game play classes
 #include "../classes/class_player.hpp"
@@ -13,10 +14,12 @@
 #include "../core/class_getter.hpp"
 #include "../core/class_LimitCater.hpp"
 
+using namespace std;
+
 namespace Menus
 {
 
-    void play_menu(bool test_mod)
+    void play_menu(bool test_mod, string player_name)
     {
         // init game play object classes
         GamePlayObject::player player;
@@ -31,6 +34,7 @@ namespace Menus
         // init value
         int round_count = 0;
         string player_input;
+        player.set_player_name(player_name);
 
         while (1)
         {
@@ -75,7 +79,12 @@ namespace Menus
             if (player_input == "3") 
             {
                 display.massage_before_buy_wood();
-                
+                shop.sell_wood(player, getter.get_int_value());
+            }
+            if (player_input == "4") 
+            {
+                display.massage_before_buy_stone();
+                shop.sell_stone(player, getter.get_int_value());
             }
 
             round_count++;
