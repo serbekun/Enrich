@@ -7,6 +7,8 @@ namespace GamePlayObject {
 
 class player {
 
+private:
+
     string name;
     int money;
     int health;
@@ -45,6 +47,14 @@ public:
         return health;        
     }
 
+    int get_wood_value() const {
+        return wood;
+    }
+
+    int get_stone_value() const {
+        return stone;
+    }
+
     string get_player_name() {
         return name;
     }
@@ -71,6 +81,22 @@ public:
 
     void change_health_value(int change_value) {
         this->health += change_value;
+    }
+
+    void change_wood_value(int change_value) {
+        this->wood += change_value;
+    }
+    
+    void change_stone_value(int change_value) {
+        this->stone += change_value;
+    }
+
+    void change_wood_value_almost(int change_value) {
+        this->wood = change_value;
+    }
+
+    void change_stone_value_almost(int change_value) {
+        this->stone = change_value;
     }
 
     void change_health_value_almost(int change_value) {
