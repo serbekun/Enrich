@@ -21,6 +21,7 @@ project structure
 ├── /Release                                # folder with compiled file
 │   └── enrich                              # bin file project
 ├── /classes                                # folder with game_play_object
+|   |── class_house_create.hpp              # class house_create for include to main.cpp
 │   ├── class_player.hpp                    # class player for include to main.cpp
 │   ├── class_shop.hpp                      # class shop for include to main.cpp
 │   └── class_shop_change_ifactive.cpp      # class shop with function for change sho ifactive exist because include class_CandleReader.hpp for include main.cpp
@@ -32,6 +33,8 @@ project structure
 ├── /menu                                   # folder with program with call all other option
 │   ├── play_menu.hpp                       # main play menu conect class folder and core folder
 │   └── start_menu.hpp                      # start menu have option and start
+├── /utils                                  # folder for some utils
+|   ├── class_house_creater_utils           # file where exist utils for class house_creater
 ├── main.cpp                                # main file compile this
 ├── README.md                               # readme file
 ```
