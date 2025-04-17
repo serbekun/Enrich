@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <string>
+#include <limits>
 
 using namespace std;
 
@@ -14,6 +15,7 @@ public:
     int get_int_value() {
         int get_value;
         cin >> get_value;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         return get_value;
     }
 

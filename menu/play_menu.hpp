@@ -7,6 +7,7 @@
 #include "../classes/class_player.hpp"
 #include "../classes/class_shop.hpp"
 #include "../classes/class_shop_change_ifactive.cpp"
+#include "../classes/class_house_creater.hpp"
 
 // Include game core
 #include "../core/class_CandleReader.hpp"
@@ -24,6 +25,7 @@ namespace Menus
         // init game play object classes
         GamePlayObject::player player;
         GamePlayObject::shop shop;
+        GamePlayObject::HouseCreater house_creater;
 
         // init core classes
         GameCore::CandleReader candle_reader;
@@ -65,6 +67,7 @@ namespace Menus
             2. buy pills
             3. buy wood
             4. buy stone
+            5. create house
             */
 
             if (player_input == "1")
@@ -85,6 +88,11 @@ namespace Menus
             {
                 display.massage_before_buy_stone();
                 shop.sell_stone(player, getter.get_int_value());
+            }
+            if (player_input == "5")
+            {
+                display.massage_before_create_house();
+                house_creater.create_house_for_person(player, getter.get_int_value());
             }
 
             round_count++;

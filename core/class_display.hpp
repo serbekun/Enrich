@@ -39,6 +39,10 @@ public:
         cout << "have many stone you want buy :";
     }
 
+    void massage_before_create_house() {
+        cout << "have many house you want create :";
+    }
+
     // funk for tests
 
     void start_test_message() {

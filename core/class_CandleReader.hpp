@@ -18,14 +18,23 @@ public:
 
     ~CandleReader() = default;
 
-    void set_normal_world_money(const GamePlayObject::player& player_obj,
+    void set_normal_world_money(const GamePlayObject::player& person1_obj,
         const GamePlayObject::shop& shop_obj) {
-        normal_world_money = player_obj.get_money_value() + shop_obj.get_money_value();
+        normal_world_money = person1_obj.get_money_value() + shop_obj.get_money_value();
     }
     
     int get_normal_world_money() const {
         return normal_world_money;
     }
+
+    int get_person_salary(GamePlayObject::player person) {
+
+        int person_salary;
+        
+
+        return person_salary;
+    }
+
 };
 
 }

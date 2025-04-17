@@ -17,6 +17,8 @@ private:
     int stone;
     int pills;
     int pills_ifactive;
+    int have_house;
+    int house_income;
 
 public:
     
@@ -29,6 +31,8 @@ public:
         stone = 0;
         pills = 2;
         pills_ifactive = 100;
+        have_house = 2;
+        house_income = 10;
     }
 
     int get_money_value() const {
@@ -53,6 +57,14 @@ public:
 
     int get_stone_value() const {
         return stone;
+    }
+
+    int get_have_house_value() {
+        return have_house;
+    }
+
+    int get_house_income() {
+        return house_income;
     }
 
     string get_player_name() {
@@ -101,6 +113,22 @@ public:
 
     void change_health_value_almost(int change_value) {
         this->health = change_value;
+    }
+
+    void change_have_house_value(int change_value) {
+        this->have_house += change_value;
+    }
+
+    void change_have_house_value_almost(int change_value) {
+        this->have_house = change_value;
+    }
+
+    void change_house_incomde_value(int change_value) {
+        this->house_income += change_value;
+    }
+
+    void change_house_income_value_almost(int change_value) {
+        this->house_income = change_value;
     }
 
     void set_player_name(const string set_name) {
